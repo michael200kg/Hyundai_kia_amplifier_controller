@@ -1,7 +1,9 @@
 # Hyundai_kia_amplifier_manager
 
-revisited version Baralgin1003's application with fixed bug with usb-serial connection in case of to many sutable devices and redesign it from buttons to sliders.
-original link: https://github.com/baralgin1003/Hyundai_kia_amplifier_manager/
+revisited version Baralgin1003's android application with fixed bug with usb-serial connection in case of to many sutable devices and redesign it from buttons to sliders.
+Here is video example: https://www.youtube.com/watch?v=yXq3r9oj_WM
+
+original link to baralgin project: https://github.com/baralgin1003/Hyundai_kia_amplifier_manager/
 
 # Original comment by baralgin1003:
 
