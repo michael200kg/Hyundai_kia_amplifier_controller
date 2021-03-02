@@ -1,4 +1,10 @@
 # Hyundai_kia_amplifier_manager
+
+revisited version Baralgin1003's application with fixed bug with usb-serial connection in case of to many sutable devices and redesign it from buttons to sliders.
+original link: https://github.com/baralgin1003/Hyundai_kia_amplifier_manager/
+
+# Original comment by baralgin1003:
+
 Activation &amp; control factory amp on hyu/kia cars
 
 Программа управления эквалайзером и балансом на штатных усилителях Hyundai и KIA. Работает вместе с модулем на базе Arduino, который подключается к CAN шине авто.
