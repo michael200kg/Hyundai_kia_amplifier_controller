@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical"
+    tools:context="ru.romavaleev.hy_kia_amp_manage.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100">
+
+        <ru.romavaleev.hy_kia_amp_manage.TextViewPlus
+            android:id="@+id/title_text"
+            android:layout_width="534dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="Amplifier control panel"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            app:customFont="fonts/Caviar_Dreams_Bold.ttf" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="345dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="00dp"
+                android:background="@drawable/gradient"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/bassSlider"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:rotation="270"
+                        android:stepSize="1"
+                        android:value="0"
+                        android:valueFrom="-10"
+                        android:valueTo="10"
+                        app:thumbColor="@color/text"
+                        app:trackColorActive="@color/text"
+                        app:trackColorInactive="#eee" />
+
+                    <ru.romavaleev.hy_kia_amp_manage.TextViewPlus
+                        android:id="@+id/bassTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|top"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_toEndOf="@+id/bassSlider"
+                        android:gravity="center"
+                        android:text="Bass"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:customFont="fonts/CaviarDream.ttf" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/middleSlider"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:rotation="270"
+                        android:stepSize="1"
+                        android:value="0"
+                        android:valueFrom="-10"
+                        android:valueTo="10"
+                        app:thumbColor="@color/text"
+                        app:trackColorActive="@color/text"
+                        app:trackColorInactive="#eee" />
+
+                    <ru.romavaleev.hy_kia_amp_manage.TextViewPlus
+                        android:id="@+id/middleTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal|top"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_toEndOf="@+id/middleSlider"
+                        android:gravity="center"
+                        android:text="Middle"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:customFont="fonts/CaviarDream.ttf" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/trebleSlider"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:rotation="270"
+                        android:stepSize="1"
+                        android:value="0"
+                        android:valueFrom="-10"
+                        android:valueTo="10"
+                        app:thumbColor="@color/text"
+                        app:trackColorActive="@color/text"
+                        app:trackColorInactive="#eee" />
+
+                    <ru.romavaleev.hy_kia_amp_manage.TextViewPlus
+                        android:id="@+id/trebletxt"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="false"
+                        android:layout_centerVertical="false"
+                        android:layout_gravity="center|top"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_toEndOf="@+id/trebleSlider"
+                        android:gravity="center"
+                        android:text="Treble"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:customFont="fonts/CaviarDream.ttf" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="00dp"
+                android:background="@drawable/gradient"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:orientation="vertical">
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/volumeSlider"
+                        android:layout_width="240dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:rotation="270"
+                        android:stepSize="1"
+                        android:value="16"
+                        android:valueFrom="0"
+                        android:valueTo="35"
+                        app:thumbColor="@color/text"
+                        app:trackColorActive="@color/text"
+                        app:trackColorInactive="#eee" />
+
+                    <ru.romavaleev.hy_kia_amp_manage.TextViewPlus
+                        android:id="@+id/volumetxt"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="false"
+                        android:layout_centerVertical="false"
+                        android:layout_gravity="center|top"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_toEndOf="@+id/volumrSlider"
+                        android:gravity="center"
+                        android:text="Volume"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:customFont="fonts/CaviarDream.ttf" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="280dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/gradient"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left">
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/balanceSlider"
+                        android:layout_width="206dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:stepSize="1"
+                        android:value="0"
+                        android:valueFrom="-10"
+                        android:valueTo="10"
+                        app:thumbColor="@color/text"
+                        app:trackColorActive="#fff"
+                        app:trackColorInactive="#fff" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left">
+
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="238dp"
+                        android:layout_gravity="left"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/faderSlider"
+                            android:layout_width="240dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:rotation="270"
+                            android:stepSize="1"
+                            android:value="0"
+                            android:valueFrom="-10"
+                            android:valueTo="10"
+                            app:thumbColor="@color/text"
+                            app:trackColorActive="#fff"
+                            app:trackColorInactive="#fff" />
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/kia_top"
+                        android:visibility="visible">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
