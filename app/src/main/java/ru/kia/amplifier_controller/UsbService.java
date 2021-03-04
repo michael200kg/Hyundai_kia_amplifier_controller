@@ -1,4 +1,4 @@
-package ru.romavaleev.hy_kia_amp_manage;
+package ru.kia.amplifier_controller;
 
 import android.app.PendingIntent;
 import android.app.Service;

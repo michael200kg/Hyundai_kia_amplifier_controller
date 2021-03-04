@@ -4,7 +4,7 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
     defaultConfig {
-        applicationId "ru.romavaleev.amplifiermanagement"
+        applicationId "ru.kia.amplifiercontrol"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 5
