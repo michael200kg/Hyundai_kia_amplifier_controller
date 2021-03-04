@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onServiceConnected(ComponentName arg0, IBinder arg1) {
             usbService = ((UsbService.UsbBinder) arg1).getService();
+            usbService.setDebug(sp.getBoolean("debugMode", false));
         }
 
         @Override

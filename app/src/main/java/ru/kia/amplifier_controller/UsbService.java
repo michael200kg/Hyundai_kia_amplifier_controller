@@ -49,7 +49,14 @@ public class UsbService extends Service {
     private UsbDeviceConnection connection;
     private UsbSerialDevice serialPort;
 
+    private boolean debugMode = false;
+
     private boolean serialPortConnected;
+
+    public void setDebug(boolean debug) {
+        debugMode = debug;
+    }
+
     /*
      *  Data received from serial port will be received here. Just populate onReceivedData with your code
      *  In this particular example. byte stream is converted to String and send to UI thread to
@@ -179,20 +186,43 @@ public class UsbService extends Service {
         if (!usbDevices.isEmpty()) {
 
             boolean deviceDelegate = true;
+
+            if (debugMode) {
+                final StringBuilder allDevices = new StringBuilder("Sutable devices: ");
+                usbDevices.entrySet()
+                        .forEach(device -> allDevices.append(String.format(" vendorId=%s, productId=%s",
+                                device.getValue().getVendorId(), device.getValue().getProductId())));
+
+                Toast.makeText(context, allDevices.toString(), Toast.LENGTH_SHORT).show();
+            }
+
             for (Map.Entry<String, UsbDevice> entry : usbDevices.entrySet()) {
 
                 device = entry.getValue();
                 int deviceVID = device.getVendorId();
                 int devicePID = device.getProductId();
 
+                if (debugMode) {
+                    Toast.makeText(context, entry.getValue().toString(), Toast.LENGTH_SHORT).show();
+                }
+
                 if (deviceVID != 0x1d6b && deviceVID != 0x0bda && (devicePID != 0x0001 && devicePID != 0x0002 && devicePID != 0x0003)) {
                     // There is a device connected to our Android device. Try to open it as a Serial Port.
+                    if (debugMode) {
+                        Toast.makeText(context,
+                                String.format("Chosen device: vendorId=%s, productId=%s", deviceVID, devicePID),
+                                Toast.LENGTH_SHORT).show();
+                    }
                     requestUserPermission();
                     deviceDelegate = false;
                 } else {
-                    Toast.makeText(context, entry.getValue().toString(), Toast.LENGTH_SHORT).show();
                     connection = null;
                     device = null;
+                    if (debugMode) {
+                        Toast.makeText(context,
+                                String.format("Device not connected: vendorId=%s, productId=%s", deviceVID, devicePID),
+                                Toast.LENGTH_SHORT).show();
+                    }
                 }
 
                 if (!deviceDelegate)
