@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_dark"
+    android:background="@color/backgroundDarkBlue"
     android:orientation="vertical"
     tools:context="ru.kia.amplifier_controller.MainActivity">
 
@@ -22,7 +22,7 @@
             android:layout_weight="2"
             android:gravity="center_vertical"
             android:text="Amplifier control panel"
-            android:textColor="#fff"
+            android:textColor="@color/titleColor"
             android:textSize="24sp"
             app:customFont="fonts/Caviar_Dreams_Bold.ttf" />
 
@@ -62,11 +62,11 @@
                         android:value="0"
                         android:valueFrom="-10"
                         android:valueTo="10"
-                        app:thumbColor="@color/text"
-                        app:trackColorActive="@color/text"
-                        app:trackColorInactive="#eee" />
+                        app:thumbColor="@color/sliderBulletColor"
+                        app:trackColorActive="@color/sliderActiveColor"
+                        app:trackColorInactive="@color/sliderInactiveColor" />
 
-                    <TextViewPlus
+                    <ru.kia.amplifier_controller.TextViewPlus
                         android:id="@+id/bassTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                         android:layout_toEndOf="@+id/bassSlider"
                         android:gravity="center"
                         android:text="Bass"
-                        android:textColor="#fff"
+                        android:textColor="@color/textColor"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:customFont="fonts/CaviarDream.ttf" />
@@ -101,11 +101,12 @@
                         android:value="0"
                         android:valueFrom="-10"
                         android:valueTo="10"
-                        app:thumbColor="@color/text"
-                        app:trackColorActive="@color/text"
-                        app:trackColorInactive="#eee" />
+                        app:thumbColor="@color/sliderBulletColor"
+                        app:trackColorActive="@color/sliderActiveColor"
+                        app:trackColorInactive="@color/sliderInactiveColor" />
 
-                    <TextViewPlus
+
+                    <ru.kia.amplifier_controller.TextViewPlus
                         android:id="@+id/middleTxt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -116,7 +117,7 @@
                         android:layout_toEndOf="@+id/middleSlider"
                         android:gravity="center"
                         android:text="Middle"
-                        android:textColor="#fff"
+                        android:textColor="@color/textColor"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:customFont="fonts/CaviarDream.ttf" />
@@ -138,11 +139,12 @@
                         android:value="0"
                         android:valueFrom="-10"
                         android:valueTo="10"
-                        app:thumbColor="@color/text"
-                        app:trackColorActive="@color/text"
-                        app:trackColorInactive="#eee" />
+                        app:thumbColor="@color/sliderBulletColor"
+                        app:trackColorActive="@color/sliderActiveColor"
+                        app:trackColorInactive="@color/sliderInactiveColor" />
 
-                    <TextViewPlus
+
+                    <ru.kia.amplifier_controller.TextViewPlus
                         android:id="@+id/trebletxt"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
@@ -154,7 +156,7 @@
                         android:layout_toEndOf="@+id/trebleSlider"
                         android:gravity="center"
                         android:text="Treble"
-                        android:textColor="#fff"
+                        android:textColor="@color/textColor"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:customFont="fonts/CaviarDream.ttf" />
@@ -187,11 +189,11 @@
                         android:value="16"
                         android:valueFrom="0"
                         android:valueTo="35"
-                        app:thumbColor="@color/text"
-                        app:trackColorActive="@color/text"
-                        app:trackColorInactive="#eee" />
+                        app:thumbColor="@color/sliderBulletColor"
+                        app:trackColorActive="@color/sliderActiveColor"
+                        app:trackColorInactive="@color/sliderInactiveColor" />
 
-                    <TextViewPlus
+                    <ru.kia.amplifier_controller.TextViewPlus
                         android:id="@+id/volumetxt"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
@@ -203,7 +205,7 @@
                         android:layout_toEndOf="@+id/volumrSlider"
                         android:gravity="center"
                         android:text="Volume"
-                        android:textColor="#fff"
+                        android:textColor="@color/textColor"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:customFont="fonts/CaviarDream.ttf" />
@@ -234,9 +236,9 @@
                         android:value="0"
                         android:valueFrom="-10"
                         android:valueTo="10"
-                        app:thumbColor="@color/text"
-                        app:trackColorActive="#fff"
-                        app:trackColorInactive="#fff" />
+                        app:thumbColor="@color/sliderBulletColor"
+                        app:trackColorActive="@color/sliderActiveColor"
+                        app:trackColorInactive="@color/sliderActiveColor" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -260,9 +262,9 @@
                             android:value="0"
                             android:valueFrom="-10"
                             android:valueTo="10"
-                            app:thumbColor="@color/text"
-                            app:trackColorActive="#fff"
-                            app:trackColorInactive="#fff" />
+                            app:thumbColor="@color/sliderBulletColor"
+                            app:trackColorActive="@color/sliderActiveColor"
+                            app:trackColorInactive="@color/sliderActiveColor" />
 
                     </FrameLayout>
 
@@ -271,7 +273,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="8dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/kia_top"
+                        android:src="@drawable/kia_back_blue"
                         android:visibility="visible">
 
                     </ImageView>

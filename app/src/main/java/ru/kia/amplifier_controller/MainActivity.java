@@ -17,8 +17,12 @@ import android.widget.Toast;
 
 import com.google.android.material.slider.Slider;
 
+import java.util.Objects;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import static java.util.Objects.nonNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     int bassVol, midVol, trebVol, balanceVol, faderVol, volVol;
     private SharedPreferences sp;
     private Handler sendHandler;
+    private boolean debug;
 
     /*
      * Notifications from UsbService will be received here.
@@ -57,7 +62,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onServiceConnected(ComponentName arg0, IBinder arg1) {
             usbService = ((UsbService.UsbBinder) arg1).getService();
-            usbService.setDebug(sp.getBoolean("debugMode", false));
+            if(nonNull(usbService)) {
+                usbService.setDebug(debug);
+            }
         }
 
         @Override
@@ -229,6 +236,7 @@ public class MainActivity extends AppCompatActivity {
         trebVol = sp.getInt("tre", 10);
         trebleSlider.setValue(trebVol - 10);
 
+        debug = sp.getBoolean("debug", false);
     }
 
     private void chSett() {

@@ -5,9 +5,10 @@ import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.widget.TextView;
 
-public class TextViewPlus extends TextView {
+import androidx.appcompat.widget.AppCompatTextView;
+
+public class TextViewPlus extends AppCompatTextView {
     private static final String TAG = "TextView";
 
     public TextViewPlus(Context context) {

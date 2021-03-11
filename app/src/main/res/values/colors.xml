@@ -4,6 +4,13 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="backBlue">#243870</color>
-    <color name="text">#f00</color>
+    <color name="textColor">#fff</color>
+    <color name="titleColor">#fff</color>
+
+    <color name="backgroundDarkBlue">#203C53</color>
+
+    <color name="sliderActiveColor">#6F9EC3</color>
+    <color name="sliderInactiveColor">#203C53</color>
+    <color name="sliderBulletColor">#ACACAC</color>
+
 </resources>
