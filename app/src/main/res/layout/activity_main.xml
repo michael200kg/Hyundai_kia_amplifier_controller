@@ -15,7 +15,7 @@
 
         <ru.kia.amplifier_controller.TextViewPlus
             android:id="@+id/title_text"
-            android:layout_width="534dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="5dp"
@@ -23,6 +23,21 @@
             android:gravity="center_vertical"
             android:text="Amplifier control panel"
             android:textColor="@color/titleColor"
+            android:textSize="24sp"
+            android:textColorLink="@color/titleColor"
+            app:customFont="fonts/Caviar_Dreams_Bold.ttf" />
+
+        <ru.kia.amplifier_controller.TextViewPlus
+            android:id="@+id/title_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="(for Kia/Hyndai)"
+            android:textColor="@color/titleColor"
+            android:textColorLink="@color/titleColor"
             android:textSize="24sp"
             app:customFont="fonts/Caviar_Dreams_Bold.ttf" />
 
@@ -64,7 +79,7 @@
                         android:valueTo="10"
                         app:thumbColor="@color/sliderBulletColor"
                         app:trackColorActive="@color/sliderActiveColor"
-                        app:trackColorInactive="@color/sliderInactiveColor" />
+                        app:trackColorInactive="@color/backgroundDarkBlue" />
 
                     <ru.kia.amplifier_controller.TextViewPlus
                         android:id="@+id/bassTxt"
@@ -103,7 +118,7 @@
                         android:valueTo="10"
                         app:thumbColor="@color/sliderBulletColor"
                         app:trackColorActive="@color/sliderActiveColor"
-                        app:trackColorInactive="@color/sliderInactiveColor" />
+                        app:trackColorInactive="@color/backgroundDarkBlue" />
 
 
                     <ru.kia.amplifier_controller.TextViewPlus
@@ -141,7 +156,7 @@
                         android:valueTo="10"
                         app:thumbColor="@color/sliderBulletColor"
                         app:trackColorActive="@color/sliderActiveColor"
-                        app:trackColorInactive="@color/sliderInactiveColor" />
+                        app:trackColorInactive="@color/backgroundDarkBlue" />
 
 
                     <ru.kia.amplifier_controller.TextViewPlus
@@ -191,7 +206,7 @@
                         android:valueTo="35"
                         app:thumbColor="@color/sliderBulletColor"
                         app:trackColorActive="@color/sliderActiveColor"
-                        app:trackColorInactive="@color/sliderInactiveColor" />
+                        app:trackColorInactive="@color/backgroundDarkBlue" />
 
                     <ru.kia.amplifier_controller.TextViewPlus
                         android:id="@+id/volumetxt"
