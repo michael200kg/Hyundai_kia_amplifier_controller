@@ -7,10 +7,10 @@
     <color name="textColor">#fff</color>
     <color name="titleColor">#fff</color>
 
-    <color name="backgroundDarkBlue">#203C53</color>
+    <color name="backgroundDarkBlue">#1B3143</color>
 
-    <color name="sliderActiveColor">#6F9EC3</color>
-    <color name="sliderInactiveColor">#203C53</color>
+    <color name="sliderActiveColor">#4D8095</color>
+    <color name="sliderInactiveColor">#1B3143</color>
     <color name="sliderBulletColor">#ACACAC</color>
 
 </resources>
