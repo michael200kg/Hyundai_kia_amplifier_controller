@@ -6,11 +6,12 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="textColor">#fff</color>
-    <color name="titleColor">#fff</color>
+    <color name="titleColor">#FFF</color>
 
     <color name="backgroundDarkBlue">#192C3C</color>
+    <color name="backgroundLightBlue">#294B67</color>
 
-    <color name="sliderActiveColor">#4D8095</color>
-    <color name="sliderBulletColor">#ACACAC</color>
+    <color name="sliderActiveColor">#fff</color>
+    <color name="sliderBulletColor">#fff</color>
 
 </resources>
